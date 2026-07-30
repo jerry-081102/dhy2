@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>皇马国际</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .room-card {
+            transition: all 0.2s;
+        }
+        .room-card:active {
+            transform: scale(0.95);
+        }
+        
+        .hm-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24">
+
+    <div class="max-w-[428px] mx-auto bg-white min-h-screen shadow-2xl overflow-hidden">
+        
+        <!-- 顶部栏 -->
+        <div class="px-4 pt-4 pb-3 bg-white border-b">
+            <div class="flex items-center justify-between">
+                <div class="text-red-600 font-bold text-lg">
+                    永久网址：<span class="text-orange-600">88801.cyou</span>
+                </div>
+                <div class="flex-1 mx-4 bg-zinc-100 rounded-full px-5 py-3 text-sm text-gray-400">
+                    输入游戏名搜索...
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏房间 -->
+        <div class="p-4 grid grid-cols-4 gap-3">
+            <div onclick="enterRoom()" class="room-card text-center cursor-pointer">
+                <img src="img/hm.png" class="hm-logo mx-auto rounded-2xl shadow-md" alt="皇马">
+                <p class="text-xs mt-2 text-gray-700">点击进入房间</p>
+            </div>
+            
+            <div onclick="enterRoom()" class="room-card text-center cursor-pointer">
+                <img src="img/hm.png" class="hm-logo mx-auto rounded-2xl shadow-md" alt="皇马">
+                <p class="text-xs mt-2 text-gray-700">点击进入房间</p>
+            </div>
+            
+            <div onclick="enterRoom()" class="room-card text-center cursor-pointer">
+                <img src="img/hm.png" class="hm-logo mx-auto rounded-2xl shadow-md" alt="皇马">
+                <p class="text-xs mt-2 text-gray-700">点击进入房间</p>
+            </div>
+            
+            <div onclick="enterRoom()" class="room-card text-center cursor-pointer">
+                <img src="img/hm.png" class="hm-logo mx-auto rounded-2xl shadow-md" alt="皇马">
+                <p class="text-xs mt-2 text-gray-700">点击进入房间</p>
+            </div>
+        </div>
+
+        <!-- 功能按钮 -->
+        <div class="px-4 pb-6">
+            <div class="flex gap-2">
+                <button onclick="enterRoom()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-3xl text-sm font-medium shadow">信誉至上</button>
+                <button onclick="enterRoom()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-3xl text-sm font-medium">新人扶持</button>
+                <button onclick="enterRoom()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-3xl text-sm font-medium">诚招实力代理</button>
+            </div>
+        </div>
+
+        <!-- 空状态 -->
+        <div class="flex flex-col items-center justify-center py-16 text-center px-4">
+            <div class="text-gray-400 text-lg">注册时用户名仅支持数字或者字母组合</div>
+        </div>
+
+        <!-- 游戏数量 -->
+        <div class="mx-4 bg-zinc-100 rounded-3xl py-4 text-center text-base">
+            当前共 <span class="font-bold text-orange-600">4</span> 个游戏
+        </div>
+
+    </div>
+
+    <script>
+        const loginUrl = "http://u5b2x-6yxx7a-xfmq-jek4j.hm.le01.cn/yl/#/login/?agentid=10001";
+        function enterRoom() {
+            window.location.href = loginUrl;
+        }
+    </script>
+</body>
+</html>
